@@ -10,15 +10,46 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-        <link href="{{ asset('css/bootstrap.min.css?v=12') }}" rel="stylesheet">
+        {{-- <link href="{{ asset('css/bootstrap.min.css?v=12') }}" rel="stylesheet"> --}}
         <!-- Scripts -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        @vite(['resources/js/app.js'])
+        <link href="{{ asset('css/font-awesome/css/all.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="{{ asset('Tables/jquery.dataTables.css') }}">
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         <script src="{{ asset('js/jquery.min.js') }}"></script>
         <script src="{{ asset('Tables/jquery.dataTables.js')}}"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </head>
-    <body class="font-sans antialiased">
+    <body class="antialiased">
+            @if (session()->has('success'))
+            @php
+                // Clear the flashed message once it has been displayed
+                Session::forget('success');
+            @endphp
+                    <script>
+                        swal("Acción correcta","{{session('success')}}", "success");
+                    </script>
+            @endif
+             @if (session()->has('warning'))
+                    <script>
+                        swal("¡Atención!","{{session('warning')}}", "warning");
+                    </script>
+                    @php
+                        // Clear the flashed message once it has been displayed
+                        Session::forget('warning');
+                    @endphp
+            @endif
+            @if (session()->has('error'))
+                    <script>
+                        swal("¡Atención!","{{session('error')}}", "error");
+                    </script>
+                    @php
+                        // Clear the flashed message once it has been displayed
+                        Session::forget('success');
+                    @endphp
+            @endif
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
             @include('layouts.navigation')
 
@@ -32,7 +63,7 @@
             @endif
 
             <!-- Page Content -->
-            <main>
+            <main class="p-5">
                 {{ $slot }}
             </main>
         </div>

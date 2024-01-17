@@ -1,0 +1,64 @@
+:root {
+    --rosa: #d8006f;
+    --negro: #313232;
+    --amarillo: #ffdd01;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('.../fonts/Oswald.ttf') format('ttf');
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    color: var(--negro)
+}
+
+
+.display {
+    display: block;
+}
+
+.bg-tag-it {
+    background-color: var(--rosa);
+}
+
+.bg-tag-it-secundary {
+    background-color: var(--amarillo);
+}
+.secundary-color {
+    color : var(--amarillo);
+}
+
+.third-color {
+    color: var(--negro);
+}
+
+.btn-accept {
+    color: var(--negro);
+    font-weight: bold;
+    background-color: var(--amarillo);
+}
+
+.btn-accept:hover {
+    color: var(--amarillo);
+    font-weight: bold;
+    background-color: var(--negro);
+}
+
+.description-yellow {
+    color: var(--amarillo);
+    font-family: 'Oswald';
+    font-size: 2rem;
+}
+
+.description-pink {
+    color: var(--rosa);
+    font-family: 'Oswald';
+    font-size: 2rem;
+}
+
+.guest-logo {
+    width: 12rem;
+    height: auto;
+}

@@ -4,31 +4,31 @@
             $('#tabla').DataTable({
                 columnDefs: [{
                    orderable: false,
-                   targets: [8]
+                   targets: [8,9]
                }]}
             );
         });
 </script>
-<div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="page-header clearfix">
-            <h2 class="pull-left">Tags</h2>
-            <a href="{{route('tags.create')}}" class="btn btn-success pull-right">Nuevo Tag</a>
-          </div>
-
-          @if(count($tags)>0)
-              <table id='tabla' class='display menutable'>
+      <div>
+        <div>
+          <h3 class="mb-10 text-3xl font-bold dark:text-white">Tags</h3>
+            <a href="{{route('tags.create')}}" class="mb-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Nuevo Tag</a>
+        </div>
+        <div>
+            @if(count($tags)>0)
+          <br>    
+          <table id='tabla' class='display'>
               <thead>
               <tr>
                 <th>Id</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>WhatsApp</th>
+                <th>Email</th>
                 <th>Estado</th>
-                <th>Hash</th>
                 <th>Creado</th>
                 <th>Actualizado</th>
+                <th>QR</th>
                 <th>Acciones</th>
               </tr>
               </thead>
@@ -39,16 +39,20 @@
                         <td>{{$item->name}}  </td>
                         <td>{{$item->surname}}  </td>
                         <td>{{$item->whatsapp}}  </td>
-                        <td>{{$item->used == 0 ? 'Sin Utilizar': 'Utilizado'}}  </td>
-                        <td>{{$item->hash}}  </td>
+                        <td>{{$item->email}}  </td>
+                        <td {{$item->used == 0 ? 'style=background-color:#41b33e' : 'style=background-color:#d11a1a'}}>{{$item->used == 0 ? 'Sin Utilizar': 'Utilizado'}}  </td>
                         <td>{{$item->created_at->format('d/m/Y H:i:s')}}  </td>
-                        <td>{{$item->updated_at}}  </td>
+                        <td>{{$item->updated_at != null ? $item->updated_at->format('d/m/Y H:i:s') : ''}}  </td>
+                        <td>{!! QrCode::size(100)->generate(env('APP_URL').'/tag/'.$item->hash."/edit") !!}</td>
+                        {{-- <td>{!! QrCode::format('png')->size(100)->merge(asset('logo.png', .3, true))->generate(env('APP_URL').'/tag/'.$item->hash."/edit") !!}</td> --}}
+
                         <td>
-                        {{-- <a class="accionmenu" href="{{route('tags.edit',$item->id) }}" title='Actualizar Registro' data-toggle='tooltip'><i class='fas fa-edit'></i></span></a>
-                        <a class="accionmenu" href="{{route('tags.delete',$item->id) }}" title='Eliminar Registro' data-toggle='tooltip'><span class='fas fa-trash-alt'></span></a> --}}
+                        <a class="accionmenu" href="{{route('tags.edit',$item->id) }}" title='Actualizar Registro' data-toggle='tooltip'><i class='fas fa-edit'></i></span></a>
+                        <a class="accionmenu" href="{{route('tags.delete',$item->id) }}" title='Eliminar Registro' data-toggle='tooltip'><span class='fas fa-trash-alt'></span></a>
                         </td>
                     </tr>
-                @endforeach
+                    @endforeach
+                    {{-- {!! QrCode::format('png')->merge('http://127.0.0.1:8000/logo.jpg', .3, true)->generate('Hola') !!} --}}
             </tbody>
             </table>
         @else
@@ -56,5 +60,4 @@
         @endif
         </div>
       </div>
-    </div>
 </x-app-layout>

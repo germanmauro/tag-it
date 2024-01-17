@@ -8,23 +8,20 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        
+        <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
-
-
     </head>
-    <body>
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0  dark:bg-gray-900">
+    <body class="antialiased">
+        <div class="min-h-screen flex flex-col bg-tag-it-secundary sm:justify-center items-center pt-6 sm:pt-0 dark:bg-gray-900">
             <div>
                 <a href="/">
-                    <img src='{{asset('logo.jpg')}}' class="fill-current guest-logo"/>
+                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
                 </a>
             </div>
 
-            <div class="w-full sm:max-w-md mt-6 p-8  dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
+            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-tag-it dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
                 {{ $slot }}
             </div>
         </div>
