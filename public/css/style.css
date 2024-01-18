@@ -9,6 +9,11 @@
     src: url('.../fonts/Oswald.ttf') format('ttf');
 }
 
+@font-face {
+    font-family: 'Oswald-bold';
+    src: url('.../fonts/Oswald-Bold.ttf') format('ttf');
+}
+
 body {
     font-family: 'Oswald', sans-serif;
     color: var(--negro)
@@ -25,6 +30,9 @@ body {
 
 .bg-tag-it-secundary {
     background-color: var(--amarillo);
+}
+.primary-color {
+    color: var(--rosa);
 }
 .secundary-color {
     color : var(--amarillo);
@@ -61,4 +69,51 @@ body {
 .guest-logo {
     width: 12rem;
     height: auto;
+}
+
+.principal-image {
+    width: 29rem;
+    height: auto;
+}
+
+.title {
+    font-family: 'Oswald-bold';
+    color: var(--negro);
+    font-size: 3.2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.contact-icons {
+    font-size: 3.2rem;
+    color: #d8006f;
+}
+
+.column-section {
+    background-color: #d8006f;
+    color: white;
+    font-family: 'Oswald-bold';
+    font-size: 2rem;
+    height: auto;
+}
+
+.text-description {
+    color: var(--negro);
+    font-family: 'Oswald';
+    font-size: 1.8rem;
+}
+
+.text-details {
+    color: var(--negro);
+    font-family: 'Oswald';
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.text-numbers {
+    font-family: 'Oswald-bold';
+    font-weight: bold;
+    margin-right: 3px;
+    font-size: 3.2rem;
+    color: var(--amarillo)
 }
