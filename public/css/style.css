@@ -117,3 +117,19 @@ body {
     font-size: 3.2rem;
     color: var(--amarillo)
 }
+
+.text-discount {
+    font-family: 'Oswald-bold';
+    font-weight: bold;
+    margin-right: 3px;
+    font-size: 3.2rem;
+    color: var(--rosa)
+}
+
+.text-precio {
+    font-family: 'Oswald-bold';
+        font-weight: bold;
+        margin-right: 3px;
+        font-size: 4rem;
+        color: var(--negro)
+}

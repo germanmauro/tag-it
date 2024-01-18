@@ -43,12 +43,12 @@
                 <a href="https://www.instagram.com/tagit.ar/"><span class="fab fa-instagram"></span></a>
                 <a href="mailto:holatagit@gmail.com"><span class="fas fa-envelope"></span></a>
             </div>
-            <div class="flex">
-                <div class="p-8 column-section lg:w-1/4">
+            <div class="lg:flex">
+                <div class="p-8 column-section lg:w-1/4 sm:w-full">
                     <p>Qué es</p>
                 </div>
-                <div class="lg:w-3/4">
-                    <div class="flex">
+                <div class="lg:w-3/4 sm:w-full">
+                    <div class="lg:flex">
                         <div class="p-8 lg:w-2/3">
                             <p class="text-description">Tag-<span class="primary-color">it</span> es una etiqueta de poliamida para coser en  los ​objetos que necesites identificar.
                         Por ejemplo ropa ​del colegio, muñecos, mochila, etc.</p>
@@ -57,7 +57,7 @@
                             <img src="{{asset('images/rollo.jpeg')}}" alt="tag-it">
                         </div>
                     </div>
-                    <div class="flex">
+                    <div class="lg:flex">
                         <div class="p-8 lg:w-2/3">
                             <p class="text-description">Tag-<span class="primary-color">it</span> contiene un código QR con tus datos de ​contacto.</p>
                             <br>
@@ -70,7 +70,7 @@
                             
                         </div>
                     </div>
-                    <div class="flex">
+                    <div class="lg:flex">
                         <div class="w-full">
                             <p class="text-details">
                                 Tag-<span class="primary-color">it</span> no es un sistema de geolocalización.​
@@ -81,14 +81,14 @@
                     </div>
                 </div>
             </div>
-            <div class="flex">
+            <div class="lg:flex">
                 <div class="p-8 column-section lg:w-1/4">
                     <p>Cómo se usa</p>
                 </div>
                 <div class="lg:w-3/4">
-                    <div class="flex">
+                    <div class="lg:flex">
                         <div class="p-8 lg:w-2/3">
-                            <div class="flex">
+                            <div class="lg:flex">
                                 <div class="w-1/10">
                                     <p class="text-numbers">1</p> 
                                 </div>
@@ -98,7 +98,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="flex mt-8">
+                            <div class="lg:flex mt-8">
                                 <div class="w-1/10">
                                     <p class="text-numbers">2</p> 
                                 </div>
@@ -110,7 +110,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="flex mt-8">
+                            <div class="lg:flex mt-8">
                                 <div class="w-1/10">
                                     <p class="text-numbers">3</p> 
                                 </div>
@@ -120,7 +120,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="flex mt-8">
+                            <div class="lg:flex mt-8">
                                 <div class="w-1/10">
                                     <p class="text-numbers">4</p> 
                                 </div>
@@ -145,39 +145,58 @@
                     
                 </div>
             </div>
-            <div class="flex">
+            <div class="lg:flex">
                 <div class="p-8 column-section lg:w-1/4">
                     <p>Quiero mi Tag-it</p>
                 </div>
                 <div class="lg:w-3/4">
-                    <div class="flex">
+                    <div class="lg:flex">
                         <div class="p-8 lg:w-1/2">
                             <p class="text-numbers text-center">PRECIO</p>
                             <p class="text-numbers text-center">LANZAMIENTO</p>
                         </div>
                         <div class="p-8 lg:w-1/2">
-                            <img src="{{asset('images/rollo.jpeg')}}" alt="tag-it">
+                            <p class="text-description text-center">SOLO POR ENERO Y FEBRERO</p>
+                            <p class="text-discount text-center">20% OFF</p>
+                            <p class="text-precio text-center">$3999</p>
+                            <p class="text-description text-center">100 ETIQUETAS</p>
+                            <p class="text-description text-center">PRECIO REGULAR $4999</p>
                         </div>
                     </div>
-                    
+                    <div class="lg:flex">
+                        <div class="p-8 w-full">
+                            <p class="text-description text-center">Escribinos y sumate a la comunidad Tag-<span class='primary-color'>it</span>.
+                                  <br>  ¡Cada vez somos más!</p>
+                        </div>
+                    </div>
+                    <div class="lg:flex">
+                        <div class="p-8 lg:w-1/2">
+                            <p class="text-description text-center">
+                                +54-911-6743-1033
+                                <br>
+                                holatagit@gmail.com
+                                <br>
+                                @tagit_qr
+                            </p>
+                        </div>
+                        <div class="lg:w-1/2 contact-icons justify-end m-4 gap-4">
+                            <a href="https://wa.me/541167431033?text=Quiero%20mas%20info">
+                            <span class="fab fa-whatsapp"></span>
+                            </a>
+                            <a href="https://www.instagram.com/tagit.ar/"><span class="fab fa-instagram"></span></a>
+                            <a href="mailto:holatagit@gmail.com"><span class="fas fa-envelope"></span></a>
+                        </div>
+                    </div>
                 </div>
             </div>
-                <div class="pbg-white flex justify-center mt-16 px-0 sm:items-center sm:justify-between">
-                    <div class="hite bg-wtext-center text-sm text-gray-500 dark:text-gray-400 sm:text-left">
-                        <div class="flex items-center gap-4">
-                            <a href="https://github.com/sponsors/taylorotwell" class="group inline-flex items-center hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="-mt-px mr-1 w-5 h-5 stroke-gray-400 dark:stroke-gray-600 group-hover:stroke-gray-600 dark:group-hover:stroke-gray-400">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                </svg>
-                                Sponsor
-                            </a>
+                    <div class="flex p-8 bg-black text-white">
+                        <div class="w-1/2">
+                            © Tag-it
                         </div>
-                    </div>
 
-                    <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </div>
-                </div>
+                        <div class="w-1/2">
+                            <p class="text-left">Todos los derechos reservados</p>
+                        </div>
         </div>
     </body>
 </html>
