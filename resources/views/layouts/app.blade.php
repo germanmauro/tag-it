@@ -13,11 +13,11 @@
         {{-- <link href="{{ asset('css/bootstrap.min.css?v=12') }}" rel="stylesheet"> --}}
         <!-- Scripts -->
         <script src="https://cdn.tailwindcss.com"></script>
-        @vite(['resources/js/app.js'])
         <link href="{{ asset('css/font-awesome/css/all.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="{{ asset('Tables/jquery.dataTables.css') }}">
 
+        <script src="{{ asset('build/assets/app-nGfMv9XH.js') }}"></script>
         <script src="{{ asset('js/jquery.min.js') }}"></script>
         <script src="{{ asset('Tables/jquery.dataTables.js')}}"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

@@ -10,7 +10,8 @@
         <!-- Fonts -->
         
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <script src="{{ asset('build/assets/app-nGfMv9XH.js') }}"></script>
+        <link href="{{ asset('build/assets/app-XgG12z8V.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
     </head>
     <body class="antialiased">
