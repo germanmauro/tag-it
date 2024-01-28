@@ -11,17 +11,16 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-        <script src="{{ asset('build/assets/app-nGfMv9XH.js') }}"></script>
+        <script src="//unpkg.com/alpinejs" defer></script>
         <link href="{{ asset('build/assets/app-XgG12z8V.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
-
 
     </head>
     <body>
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0  dark:bg-gray-900">
             <div>
                 <a href="/">
-                    <img src='{{asset('logo.jpg')}}' class="fill-current guest-logo"/>
+                    <img src='{{asset('logo.png')}}' class="fill-current guest-logo"/>
                 </a>
             </div>
 

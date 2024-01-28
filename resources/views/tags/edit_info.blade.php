@@ -1,6 +1,7 @@
 <x-form-layout>
     <div class="panel-heading">
-        <h3 class="mb-4 text-white">CARGE LA INFORMACIÓN DE SU TAG PARA QUE PUEDA SER RASTREADO</h3>
+        <h3 class="mb-4 text-white">COMPLETÁ TUS DATOS DE CONTACTO PARA ACTIVAR TUS TAG-IT. </h3>
+        <p class="mb-4 text-white">Colocá el mail y celular que uses habitualmente para que cuando alguien encuentre tu Tag-it te enteres enseguida.</p>
     </div>
     <form method="POST" action="{{ route('tags.update_info',$tag) }}">
         @csrf
@@ -22,14 +23,14 @@
         <!-- Email Address -->
         <div class="mt-4">
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="$tag->email" autocomplete="email" required/>
+            <x-text-input  id="email" class="block mt-1 w-full" type="email" name="email" :value="$tag->email" autocomplete="email" required/>
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
         <!-- Whatsapp -->
         <div class="mt-4">
-            <x-input-label for="whatsapp" :value="__('WhatsApp')" />
-            <x-text-input id="whatsapp" class="block mt-1 w-full" type="text" name="whatsapp" :value="$tag->whatsapp" autocomplete="whatsapp" required/>
+            <x-input-label for="whatsapp" :value="__('WhatsApp (Colocá código de país y de área, sin guiones ni espacios)')" />
+            <x-text-input placeholder='54911xxxxxxxx' id="whatsapp" class="block mt-1 w-full" type="text" name="whatsapp" :value="$tag->whatsapp" autocomplete="whatsapp" required/>
             <x-input-error :messages="$errors->get('whatsapp')" class="mt-2" />
         </div>
 
@@ -40,7 +41,7 @@
             </x-cancel-button>
 
             <x-primary-button class="ms-4">
-                {{ __('Generar') }}
+                {{ __('Activar') }}
             </x-primary-button>
         </div>
     </form>

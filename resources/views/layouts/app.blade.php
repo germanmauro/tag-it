@@ -13,11 +13,13 @@
         {{-- <link href="{{ asset('css/bootstrap.min.css?v=12') }}" rel="stylesheet"> --}}
         <!-- Scripts -->
         <script src="https://cdn.tailwindcss.com"></script>
+       
         <link href="{{ asset('css/font-awesome/css/all.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="{{ asset('Tables/jquery.dataTables.css') }}">
-
+        <script src="//unpkg.com/alpinejs" defer></script>
         <script src="{{ asset('build/assets/app-nGfMv9XH.js') }}"></script>
+        <link href="{{ asset('build/assets/app-XgG12z8V.css') }}" rel="stylesheet" type="text/css">
         <script src="{{ asset('js/jquery.min.js') }}"></script>
         <script src="{{ asset('Tables/jquery.dataTables.js')}}"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

@@ -9,9 +9,18 @@
        <script src="https://cdn.tailwindcss.com"></script>
         <link href="{{ asset('css/font-awesome/css/all.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
-       
+       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </head>
     <body class="antialiased">
+        @if (session()->has('success'))
+            @php
+                // Clear the flashed message once it has been displayed
+                Session::forget('success');
+            @endphp
+                    <script>
+                        swal("¡Listo! Ya podés usar tus Tag-it.","", "success");
+                    </script>
+            @endif
         <div>
             {{-- @if (Route::has('login'))
                 <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
@@ -37,10 +46,10 @@
                 <h1 class="title">RECUPERÁ TUS OBJETOS PERDIDOS</h1>
             </div>
             <div class="contact-icons flex justify-end m-4 gap-4">
-              <a href="https://wa.me/541167431033?text=Quiero%20mas%20info">
+              <a href="https://wa.me/541167431033?text=¡Hola!%20Quiero%20mi%20TAG-IT">
                 <span class="fab fa-whatsapp"></span>
               </a>
-                <a href="https://www.instagram.com/tagit.ar/"><span class="fab fa-instagram"></span></a>
+                <a href="https://www.instagram.com/tagit_qr/"><span class="fab fa-instagram"></span></a>
                 <a href="mailto:holatagit@gmail.com"><span class="fas fa-envelope"></span></a>
             </div>
             <div class="lg:flex">
@@ -134,10 +143,10 @@
                         <div class="p-8 lg:w-1/3">
                             <img src="{{asset('images/sweater.jpeg')}}" alt="tag-it">
                             <div class="contact-icons m-4 gap-4">
-                            <a href="https://wa.me/541167431033?text=Quiero%20mas%20info">
+                            <a href="https://wa.me/541167431033?text=¡Hola!%20Quiero%20mi%20TAG-IT">
                                 <span class="fab fa-whatsapp"></span>
                             </a>
-                                <a href="https://www.instagram.com/tagit.ar/"><span class="fab fa-instagram"></span></a>
+                                <a href="https://www.instagram.com/tagit_qr/"><span class="fab fa-instagram"></span></a>
                                 <a href="mailto:holatagit@gmail.com"><span class="fas fa-envelope"></span></a>
                             </div>
                         </div>
@@ -180,10 +189,10 @@
                             </p>
                         </div>
                         <div class="lg:w-1/2 contact-icons justify-end m-4 gap-4">
-                            <a href="https://wa.me/541167431033?text=Quiero%20mas%20info">
+                            <a href="https://wa.me/541167431033?text=¡Hola!%20Quiero%20mi%20TAG-IT">
                             <span class="fab fa-whatsapp"></span>
                             </a>
-                            <a href="https://www.instagram.com/tagit.ar/"><span class="fab fa-instagram"></span></a>
+                            <a href="https://www.instagram.com/tagit_qr/"><span class="fab fa-instagram"></span></a>
                             <a href="mailto:holatagit@gmail.com"><span class="fas fa-envelope"></span></a>
                         </div>
                     </div>
@@ -191,7 +200,7 @@
             </div>
                     <div class="flex p-8 bg-black text-white">
                         <div class="w-1/2">
-                            © Tag-it
+                            © Tag-it Buenos Aires, Argentina
                         </div>
 
                         <div class="w-1/2">

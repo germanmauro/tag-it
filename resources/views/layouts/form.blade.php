@@ -10,9 +10,12 @@
         <!-- Fonts -->
         
         <!-- Scripts -->
+        <script src="https://cdn.tailwindcss.com"></script>
         <script src="{{ asset('build/assets/app-nGfMv9XH.js') }}"></script>
         <link href="{{ asset('build/assets/app-XgG12z8V.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('css/font-awesome/css/all.css') }}" rel="stylesheet" type="text/css">
+
     </head>
     <body class="antialiased">
         <div class="min-h-screen flex flex-col bg-tag-it-secundary sm:justify-center items-center pt-6 sm:pt-0 dark:bg-gray-900">

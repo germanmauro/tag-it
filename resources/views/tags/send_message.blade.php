@@ -1,9 +1,10 @@
-<x-guest-layout>
+<x-form-layout>
 <div>
-      <p class="description-pink">!Encontraste un tag!</p>
-      <p class="description-yellow">Enviale un mensaje al dueño para que pueda recuperarlo</p>
-      <a target="_blank" href="https://wa.me/{{$telephone}}?text=Encontré%20un%20objeto%20tuyo%20y%20quiero%20devolvertelo">
-        <img class="h-auto max-w-40" src={{asset('images/whatsapp.png')}} /></a>
+      <h3 class="text-send-message">!Encontraste un tag!</h3>
+      <h3 class="text-send-message">Enviale un mensaje al dueño para devolvérselo</h3>
+      <br>
+      <a class="btn-send" target="_blank" href="https://wa.me/{{$telephone}}?text=¡Hola!%20Encontré%20un%20objeto%20tuyo%20con%20TAG-IT%20y%20quiero%20devolvértelo">
+        Avisar al dueño <span class="fab fa-whatsapp"></span></a>
       {{-- {{$telephone}} --}}
     </div>
 </x-guest-layout>

@@ -133,3 +133,23 @@ body {
         font-size: 4rem;
         color: var(--negro)
 }
+
+.text-send-message {
+    color: white;
+    font-family: 'Oswald';
+    font-size: 1.8rem;
+}
+
+.btn-send {
+    border-radius: 12px;
+    background-color: var(--negro);
+    font-family: 'Oswald';
+    font-size: 1.8rem;
+    background-color: var(--amarillo);
+    padding: 10px 10px;
+}
+
+.btn-send:hover {
+    color: var(--amarillo);
+    background-color: var(--negro);
+}

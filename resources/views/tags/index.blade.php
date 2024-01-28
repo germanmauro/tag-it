@@ -43,8 +43,8 @@
                         <td {{$item->used == 0 ? 'style=background-color:#41b33e' : 'style=background-color:#d11a1a'}}>{{$item->used == 0 ? 'Sin Utilizar': 'Utilizado'}}  </td>
                         <td>{{$item->created_at->format('d/m/Y H:i:s')}}  </td>
                         <td>{{$item->updated_at != null ? $item->updated_at->format('d/m/Y H:i:s') : ''}}  </td>
-                        <td>{!! QrCode::size(100)->generate(env('APP_URL').'/tag/'.$item->hash."/edit") !!}</td>
-                        {{-- <td>{!! QrCode::format('png')->size(100)->merge(asset('logo.png', .3, true))->generate(env('APP_URL').'/tag/'.$item->hash."/edit") !!}</td> --}}
+                        {{-- <td>{!! QrCode::size(100)->generate(env('APP_URL').'/tags/'.$item->hash."/info") !!}</td> --}}
+                        <td><img src="data:image/png;base64, {{base64_encode(QrCode::format('png')->size(100)->merge(asset('logo-main.png'), .3, true)->errorCorrection('H')->generate(env('APP_URL').'/tags/'.$item->hash."/info")) }}"/></td> 
 
                         <td>
                         <a class="accionmenu" href="{{route('tags.edit',$item->id) }}" title='Actualizar Registro' data-toggle='tooltip'><i class='fas fa-edit'></i></span></a>

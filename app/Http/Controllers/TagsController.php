@@ -60,7 +60,7 @@ class TagsController extends Controller
         $tag->used = 1;
         $tag->save();
 
-        return redirect("/")->with("success", "Registro actualizado correctamente");
+        return redirect("/")->with("success", "¡Listo! Ya podés usar tus Tag-it.");
         ;
     }
     /**
