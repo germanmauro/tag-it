@@ -2,9 +2,10 @@
 <script type="text/javascript">
         $(document).ready(function() {
             $('#tabla').DataTable({
+              order: [[0, 'desc']],
                 columnDefs: [{
                    orderable: false,
-                   targets: [8,9]
+                   targets: [0,8]
                }]}
             );
         });
@@ -44,8 +45,7 @@
                         <td>{{$item->created_at->format('d/m/Y H:i:s')}}  </td>
                         <td>{{$item->updated_at != null ? $item->updated_at->format('d/m/Y H:i:s') : ''}}  </td>
                         {{-- <td>{!! QrCode::size(100)->generate(env('APP_URL').'/tags/'.$item->hash."/info") !!}</td> --}}
-                        <td><img src="data:image/png;base64, {{base64_encode(QrCode::format('png')->size(100)->merge(asset('logo-main.png'), .3, true)->errorCorrection('H')->generate(env('APP_URL').'/tags/'.$item->hash."/info")) }}"/></td> 
-
+                        <td><img src="data:image/png;base64, {{base64_encode(QrCode::format('png')->size(100)->merge(asset('logo-qr.png'), .3, true)->errorCorrection('H')->generate(env('APP_URL').'/tags/'.$item->hash."/info")) }}"/></td> 
                         <td>
                         <a class="accionmenu" href="{{route('tags.edit',$item->id) }}" title='Actualizar Registro' data-toggle='tooltip'><i class='fas fa-edit'></i></span></a>
                         <a class="accionmenu" href="{{route('tags.delete',$item->id) }}" title='Eliminar Registro' data-toggle='tooltip'><span class='fas fa-trash-alt'></span></a>
