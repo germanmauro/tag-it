@@ -10,6 +10,9 @@
         <link href="{{ asset('css/font-awesome/css/all.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+       <script>
+        window.location.href = 'https://www.instagram.com/tagit_qr';
+       </script>
     </head>
     <body class="antialiased">
         @if (session()->has('success'))

@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/tag_success', function () {
+    return view('tag_success');
+});
+
 // Tag Info
 Route::get('/tags/{hash}/info', [TagsController::class, 'info'])->name("tags.info");
 Route::get('/tags/send_message/{telephone}', [TagsController::class, 'info'])->name("tags.send_message");

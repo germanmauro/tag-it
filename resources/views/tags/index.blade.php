@@ -29,7 +29,7 @@
                 <th>Estado</th>
                 <th>Creado</th>
                 <th>Actualizado</th>
-                <th>QR</th>
+                {{-- <th>QR</th> --}}
                 <th>Acciones</th>
               </tr>
               </thead>
@@ -45,8 +45,10 @@
                         <td>{{$item->created_at->format('d/m/Y H:i:s')}}  </td>
                         <td>{{$item->updated_at != null ? $item->updated_at->format('d/m/Y H:i:s') : ''}}  </td>
                         {{-- <td>{!! QrCode::size(100)->generate(env('APP_URL').'/tags/'.$item->hash."/info") !!}</td> --}}
-                        <td><img src="data:image/png;base64, {{base64_encode(QrCode::format('png')->size(100)->merge(asset('logo-qr.png'), .3, true)->errorCorrection('H')->generate(env('APP_URL').'/tags/'.$item->hash."/info")) }}"/></td> 
+                        {{-- <td><img src="data:image/png;base64, {{base64_encode(QrCode::format('png')->size(100)->merge(asset('logo-qr.png'), .3, true)->errorCorrection('H')->generate(env('APP_URL').'/tags/'.$item->hash."/info")) }}"/></td>  --}}
                         <td>
+                        {{-- <a class="accion menu" href="data:image/png;base64, {{base64_encode(QrCode::format('png')->size(500)->merge(asset('logo-qr.png'), .3, true)->errorCorrection('M')->generate(env('APP_URL').'/tags/'.$item->hash."/info")) }}" download="{{$item->id}}"
+                          title='Imprimir QR' data-toggle='tooltip'><i class='fas fa-print'></i></span></a> --}}
                         <a class="accionmenu" href="{{route('tags.edit',$item->id) }}" title='Actualizar Registro' data-toggle='tooltip'><i class='fas fa-edit'></i></span></a>
                         <a class="accionmenu" href="{{route('tags.delete',$item->id) }}" title='Eliminar Registro' data-toggle='tooltip'><span class='fas fa-trash-alt'></span></a>
                         </td>
